@@ -95,7 +95,7 @@ export default function Sidebar() {
             {/* <a href="#" className="social-link" aria-label="Instagram"><InstagramIcon /></a>
           <a href="#" className="social-link" aria-label="Twitter/X"><TwitterIcon /></a> */}
             <div>
-              <a href="/Maimun_Resume.pdf" download class="email-btn" download="">
+              <a href="/Maimun Resume.pdf" download class="email-btn" download="">
                 <span>Download CV</span>
               </a>
             </div>
