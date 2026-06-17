@@ -1,0 +1,40 @@
+/* ── ANIMATION BASE STYLES ──
+   Add this to your existing index.css or paste at top of App.css
+   These are the "before visible" starting states + transition.
+*/
+
+[data-animate] {
+  opacity: 0;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  will-change: opacity, transform;
+}
+
+[data-animate="fade-up"] {
+  transform: translateY(32px);
+}
+
+[data-animate="fade-down"] {
+  transform: translateY(-32px);
+}
+
+[data-animate="fade-left"] {
+  transform: translateX(-32px);
+}
+
+[data-animate="fade-right"] {
+  transform: translateX(32px);
+}
+
+[data-animate="fade-in"] {
+  transform: none;
+}
+
+[data-animate="scale-up"] {
+  transform: scale(0.92);
+}
+
+/* ── VISIBLE STATE (added by useScrollAnimate hook) ── */
+[data-animate].visible {
+  opacity: 1;
+  transform: none !important;
+}

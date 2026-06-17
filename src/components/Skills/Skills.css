@@ -1,0 +1,106 @@
+.skills {}
+
+.skills .section-label {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 32px;
+}
+
+.skills-category {
+  margin-bottom: 40px;
+}
+
+.skills-category h3 {
+  font-size: 1rem;
+  color: var(--text-primary);
+  margin-bottom: 18px;
+  letter-spacing: 0.05em;
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+/* CARD */
+
+.tool-card {
+  position: relative;
+
+  width: 120px;
+  height: 120px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: var(--tag-bg);
+  border: 1px solid var(--tag-border);
+  border-radius: 12px;
+
+  overflow: hidden;
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.tool-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent);
+  background: rgba(100, 255, 218, 0.08);
+}
+
+/* TEXT */
+
+.tool-name {
+  position: absolute;
+
+  color: var(--accent);
+
+  font-size: 0.9rem;
+  font-weight: 600;
+
+  transition: 0.3s;
+}
+
+/* IMAGE */
+
+.tool-icon {
+  position: absolute;
+
+  width: 120px;
+  height: 120px;
+
+  object-fit: cover;
+
+  opacity: 0;
+  transform: scale(0.7);
+
+  transition: 0.3s;
+}
+
+/* HOVER EFFECT */
+
+.tool-card:hover .tool-name {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+.tool-card:hover .tool-icon {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+  .skills-grid {
+    justify-content: center;
+  }
+
+}
